@@ -4,6 +4,9 @@ function initialize(){
     storySplitter();
 }
 function storySplitter(){
-    splitStory = STORIES[storyIndex].split("**");
-    alert(splitStory[1]);  
+    splitStory = STORIES[storyIndex].split(DELIMITER);
+    alert(splitStory[0]);
+    for(var i = 1;i < (STORIES[storyIndex].length); i=i+2){
+        alert(splitStory[i]);
+    }
 }
